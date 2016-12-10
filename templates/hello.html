@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Toss Now</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/mainpage.css') }}">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<center>
+    <div class="container">
+<h1>Let The Computer Predict For You!</h1>
+
+<div class=".col-xs-6 .col-md-4">
+ {% if coin==0 %}
+    <div class="coin">
+        HEAD
+    </div>
+    {% else %}
+    <div class="coin">
+        TAIL
+    </div>
+    {% endif %}
+  </div>
+    <br>
+    <button class="btn button" onClick="window.location.reload()">TOSS AGAIN</button>
+    </div>
+
+<div class="footer">
+  Made With <span style="color:red"class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> by <a href="http://facebook.com/csbadhe08" target="_blank">Chetan Badhe</a> using
+  <a target="_blank" href="http://flask.pocoo.org">Flask</a> and <a target="_blank" href="http://getbootstrap.com"> Bootstrap</a>.
+</div>
+  </center>
+    </body>
+    <script>
+        $(document).ready(function() {
+            $('#next').click(function() {
+                $.ajax("{{ url_for('toss') }}").done(function(reply) {
+                    $('#container').html(reply);
+                });
+            });
+        });
+    </script>
+
+</html>

@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: grey;
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.coin{
+  border: 5px solid #f4cb42;
+  background: #f1f1f0;
+  border-radius: 100%;
+  width:300px;
+  height: 290px;
+  padding-top: 70px;
+  font-family: 'Bangers', cursive;
+  line-height: 1.5;
+  font-size: 100px;
+
+}
+
+.button{
+  font-size: 24px;
+  padding: 10px;
+  width: 300px;
+  height: 60px;
+  margin-bottom: 20px;
+  background: #f4cb42;
+  border: 3px solid grey;
+}
+
+.button:hover{
+  font-size: 24px;
+  transition-delay: 1s; /* delays for 1 second */
+-webkit-transition-delay: 1s; /* for Safari & Chrome */
+transition: all 500ms linear;
+background: white;
+border: 1px solid #f4cb42;
+}
+
+.footer{
+  margin-top: 40px;
+}
