@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def toss():
-    coin = randint(0,1)
+    coin = randint(0,2)
     return render_template('hello.html', spin=spin)
 
 
